@@ -1,7 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 function Navigation(props) {
+  //console.log(props.initialValue);
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,13 +56,13 @@ function Navigation(props) {
               </li>
             </ul>
             <form className="d-flex">
-              <button className="btn btn-outline-dark" type="submit">
-                <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+              <a className="btn btn-outline-dark">
+                <FontAwesomeIcon icon={faCartShopping} />
                 Cart
                 <span className="badge bg-dark text-white ms-1 rounded-pill">
                   {props.initialValue}
                 </span>
-              </button>
+              </a>
             </form>
           </div>
         </div>
