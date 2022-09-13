@@ -12,81 +12,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function App() {
-  const [initialValue, setInitial] = useState(0);
-  //console.log(initialValue);
-  const change1 = (a) => {
-    //console.log(a);
-    if (a.target.innerHTML === "Add to cart") {
-      console.log(a.target.innerHTML);
-      setInitial(initialValue + 1);
-      a.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      a.target.innerHTML = "Add to cart";
-    }
-  };
-  const change2 = (b) => {
-    if (b.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
-      b.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      b.target.innerHTML = "Add to cart";
-    }
-  };
-  const change3 = (c) => {
-    if (c.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
-      c.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      c.target.innerHTML = "Add to cart";
-    }
-  };
-  const change4 = (d) => {
-    if (d.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
-      d.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      d.target.innerHTML = "Add to cart";
-    }
-  };
-  const change5 = (e) => {
+  const [initialValue, setInitialValue] = useState(0);
+  const handleChange = (e) => {
     if (e.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
+      setInitialValue(initialValue + 1);
       e.target.innerHTML = "Remove from cart";
     } else {
-      setInitial(initialValue - 1);
+      setInitialValue(initialValue - 1);
       e.target.innerHTML = "Add to cart";
-    }
-  };
-  const change6 = (f) => {
-    if (f.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
-      f.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      f.target.innerHTML = "Add to cart";
-    }
-  };
-  const change7 = (g) => {
-    if (g.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
-      g.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      g.target.innerHTML = "Add to cart";
-    }
-  };
-
-  const change8 = (h) => {
-    if (h.target.innerHTML === "Add to cart") {
-      setInitial(initialValue + 1);
-      h.target.innerHTML = "Remove from cart";
-    } else {
-      setInitial(initialValue - 1);
-      h.target.innerHTML = "Add to cart";
     }
   };
   return (
@@ -132,8 +65,8 @@ function App() {
                   <div className="text-center ">
                     <a
                       className="btn btn-outline-dark mt-auto"
-                      href={"#"}
-                      onClick={(a) => change1(a)}
+                      href="#"
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -180,7 +113,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(b) => change2(b)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -227,7 +160,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(c) => change3(c)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -267,7 +200,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(d) => change4(d)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -314,7 +247,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(e) => change5(e)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -354,7 +287,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(f) => change6(f)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -401,7 +334,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(g) => change7(g)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
@@ -441,7 +374,7 @@ function App() {
                     <a
                       className="btn btn-outline-dark mt-auto"
                       href={"#"}
-                      onClick={(h) => change8(h)}
+                      onClick={(e) => handleChange(e)}
                     >
                       Add to cart
                     </a>
