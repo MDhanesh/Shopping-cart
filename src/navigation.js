@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-function Navigation(props) {
+function Navigation({ initialValue }) {
   //console.log(props.initialValue);
   return (
     <>
@@ -60,7 +60,7 @@ function Navigation(props) {
                 <FontAwesomeIcon icon={faCartShopping} />
                 Cart
                 <span className="badge bg-dark text-white ms-1 rounded-pill">
-                  {props.initialValue}
+                  {initialValue}
                 </span>
               </a>
             </form>
